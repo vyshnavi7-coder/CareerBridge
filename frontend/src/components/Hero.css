@@ -6,7 +6,7 @@ justify-content:space-between;
 
 align-items:center;
 
-padding:90px 8%;
+padding:150px 8% 80px;
 
 background:linear-gradient(135deg,#eff6ff,#ffffff);
 }
@@ -154,6 +154,67 @@ font-size:18px;
 justify-content:center;
 
 flex-wrap:wrap;
+}
+
+}
+.hero-stats{
+
+display:flex;
+
+gap:40px;
+
+margin-top:50px;
+}
+
+.hero-stats h3{
+
+font-size:34px;
+
+color:#2563eb;
+
+margin-bottom:5px;
+}
+
+.hero-stats span{
+
+color:#666;
+
+font-size:15px;
+}
+
+.hero-image img{
+
+animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+}
+
+50%{
+
+transform:translateY(-15px);
+}
+
+100%{
+
+transform:translateY(0);
+}
+
+}
+
+@media(max-width:900px){
+
+.hero-stats{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:30px;
 }
 
 }

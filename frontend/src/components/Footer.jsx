@@ -1,23 +1,54 @@
 import "./Footer.css";
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+} from "react-icons/fa";
 
 function Footer() {
   return (
     <footer className="footer" id="contact">
 
-      <h2>CareerBridge</h2>
+      <div className="footer-container">
 
-      <p>
-        Empowering students with internships, learning roadmaps,
-        resume building and placement preparation.
-      </p>
+        <div className="footer-about">
+          <div className="footer-logo">
+            <FaGraduationCap />
+            <h2>CareerBridge</h2>
+          </div>
 
-      <div className="social-icons">
+          <p>
+            Empowering students with internships, career roadmaps,
+            resume building and placement preparation.
+          </p>
+        </div>
 
-        <a href="#"><FaGithub /></a>
-        <a href="#"><FaLinkedin /></a>
-        <a href="#"><FaInstagram /></a>
-        <a href="#"><FaEnvelope /></a>
+        <div className="footer-links">
+          <h3>Quick Links</h3>
+
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#stats">Stats</a>
+          <a href="#reviews">Reviews</a>
+        </div>
+
+        <div className="footer-contact">
+          <h3>Connect</h3>
+
+          <a href="#">
+            <FaGithub /> GitHub
+          </a>
+
+          <a href="#">
+            <FaLinkedin /> LinkedIn
+          </a>
+
+          <a href="mailto:careerbridge@gmail.com">
+            <FaEnvelope /> careerbridge@gmail.com
+          </a>
+
+        </div>
 
       </div>
 
