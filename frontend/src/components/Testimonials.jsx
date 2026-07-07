@@ -6,6 +6,30 @@ import viswa from "../assets/images/viswa.png";
 import poojith from "../assets/images/poojith.png";
 
 function Testimonials() {
+  const testimonials = [
+    {
+      image: vyshnavi,
+      name: "Vyshnavi Chinthala",
+      role: "B.Tech CSE Student",
+      review:
+        "CareerBridge helped me organize my placement preparation, improve my resume, and confidently apply for internships.",
+    },
+    {
+      image: viswa,
+      name: "Viswa Chinthala",
+      role: "Full Stack Developer",
+      review:
+        "The learning roadmap and internship tracker made my preparation much more structured and effective.",
+    },
+    {
+      image: poojith,
+      name: "Poojith Polisetti",
+      role: "Software Engineer Aspirant",
+      review:
+        "A simple and powerful platform that brings resumes, internships, and career planning together.",
+    },
+  ];
+
   return (
     <section className="testimonials" id="reviews">
       <h2>What Our Students Say</h2>
@@ -16,73 +40,27 @@ function Testimonials() {
       </p>
 
       <div className="testimonial-grid">
+        {testimonials.map((item, index) => (
+          <div className="testimonial-card" key={index}>
+            <img
+              src={item.image}
+              alt={item.name}
+              className="testimonial-image"
+            />
 
-        {/* Card 1 */}
-        <div className="testimonial-card">
-          <img src={vyshnavi} alt="Vyshnavi Chinthala" />
+            <h3>{item.name}</h3>
 
-          <h3>Vyshnavi Chinthala</h3>
+            <h4 className="role">{item.role}</h4>
 
-          <h4 className="role">B.Tech CSE Student</h4>
+            <div className="stars">
+              {[...Array(5)].map((_, i) => (
+                <FaStar key={i} />
+              ))}
+            </div>
 
-          <div className="stars">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
+            <p>{item.review}</p>
           </div>
-
-          <p>
-            CareerBridge helped me organize my placement preparation,
-            improve my resume, and confidently apply for internships.
-          </p>
-        </div>
-
-        {/* Card 2 */}
-        <div className="testimonial-card">
-          <img src={viswa} alt="Viswa Chinthala" />
-
-          <h3>Viswa Chinthala</h3>
-
-          <h4 className="role">Full Stack Developer</h4>
-
-          <div className="stars">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-          </div>
-
-          <p>
-            The learning roadmap and internship tracker made my
-            preparation much more structured and effective.
-          </p>
-        </div>
-
-        {/* Card 3 */}
-        <div className="testimonial-card">
-          <img src={poojith} alt="Poojith Polisetti" />
-
-          <h3>Poojith Polisetti</h3>
-
-          <h4 className="role">Software Engineer Aspirant</h4>
-
-          <div className="stars">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-          </div>
-
-          <p>
-            A simple and powerful platform that brings resumes,
-            internships and career planning together.
-          </p>
-        </div>
-
+        ))}
       </div>
     </section>
   );
